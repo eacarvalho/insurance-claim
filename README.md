@@ -1,5 +1,7 @@
 # Insurance Claim
-Patient Insurance Claim Workflow it is using Chainlit, LLM, Embeddings, Langchain and Langgraph.
+Powered by AI: Patient Insurance Claim
+
+It is using Chainlit, LLM, Embeddings, Langchain and Langgraph.
 
 # How to Install
 ```text
