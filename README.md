@@ -1,20 +1,76 @@
-# Insurance Claim
-Powered by AI: Patient Insurance Claim
+## 🏥 AI Powered Insurance Claim Assistant
 
-It is using Chainlit, LLM, Embeddings, Langchain and Langgraph.
+This project is an AI-driven insurance claim assistant that guides users through the process of submitting a medical claim.  
+It leverages modern tools such as **LangChain**, **LangGraph**, **LLMs**, **Embeddings**, and **Chainlit** to create a conversational and intelligent experience.
 
-# How to Install
-```text
+---
+
+### 🚀 Features
+
+- Conversational UI powered by **Chainlit**
+- Intelligent flow handling with **LangGraph**
+- Natural language processing via **OpenAI LLMs**
+- Vector-based memory using **Embeddings**
+- Optional observability with **LangSmith**
+
+---
+
+### ⚙️ Installation
+
+#### 1. Set up Environment Variables
+
+Create a `.env` file at the root of the project and add your OpenAI API key:
+
+```env
+OPENAI_API_KEY=your-api-key-here
+```
+
+#### 2. Install Dependencies
+```env
 pip install -r requirements.txt
 ```
 
-# How to Run
-```text
+---
+
+### 🧪 How to Run
+
+Start the application with:
+
+```env
 docker compose up
 chainlit run app.py
 ```
+Then access it in your browser at:
 
-# How to Test
-Access the URL: http://localhost:8000/
+👉 http://localhost:8000/
 
-Test with the data in the `test data.txt` file.
+You can test it using the example data provided in the `test data.txt` file.
+
+---
+
+### 🔍 Observability
+To enable tracing with LangSmith:
+- Create an account and obtain your API key.
+- Add the following to your .env file:
+
+```env
+LANGSMITH_TRACING=true
+LANGSMITH_API_KEY=your-langsmith-api-key
+LANGSMITH_PROJECT=your-project-name
+```
+Once configured, you can view traces at:
+
+👉 [LangSmith Dashboard] (https://smith.langchain.com)
+
+---
+
+### 📁 Project Structure
+
+```text
+.
+├── app.py
+├── requirements.txt
+├── .env
+├── docker-compose.yml
+└── test data.txt
+```
