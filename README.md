@@ -10,6 +10,7 @@ pip install -r requirements.txt
 
 # How to Run
 ```text
+docker compose up
 chainlit run app.py
 ```
 
