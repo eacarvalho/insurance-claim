@@ -17,7 +17,15 @@ It leverages modern tools such as **LangChain**, **LangGraph**, **LLMs**, **Embe
 
 ### ⚙️ Installation
 
-#### 1. Set up Environment Variables
+#### 1. Pre-requisites
+
+Have Python and Docker installed, for Python you can use Homebrew
+```env
+brew install python@3.11
+brew install pipx
+```
+
+#### 2. Set up Environment Variables
 
 Create a `.env` file at the root of the project and add your OpenAI API key:
 
@@ -25,7 +33,7 @@ Create a `.env` file at the root of the project and add your OpenAI API key:
 OPENAI_API_KEY=your-api-key-here
 ```
 
-#### 2. Install Dependencies
+#### 3. Install Dependencies
 ```env
 pip install -r requirements.txt
 ```
@@ -34,17 +42,38 @@ pip install -r requirements.txt
 
 ### 🧪 How to Run
 
-Start the application with:
+#### 1. Spin up the database container
 
 ```env
 docker compose up
+```
+
+#### 2. Run the Chainlit App
+
+Start the application with:
+
+```env
 chainlit run app.py
 ```
 Then access it in your browser at:
 
 👉 http://localhost:8000/
 
-You can test it using the example data provided in the `test data.txt` file.
+> **Note:** You can test it using the example data provided in the `test data.txt` file.
+
+#### 3. Run as API (Optional)
+
+Start the application with:
+
+```env
+uvicorn claim_processing_api:app --reload
+```
+
+Then access it in your browser at:
+
+👉 http://127.0.0.1:8000/docs#
+
+> **Note:** You can test it using the example data provided in the `test data.txt` file.
 
 ---
 
